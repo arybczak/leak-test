@@ -16,6 +16,8 @@ executable leak-test
   build-depends:    base <5
 
   ghc-options: -threaded
+  cc-options: -fsanitize=address -g
+  ld-options: -fsanitize=address
 
   c-sources: cbits/test.c
 
